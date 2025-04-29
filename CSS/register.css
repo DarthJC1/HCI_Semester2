@@ -1,0 +1,354 @@
+@keyframes slidein{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideout{
+    from{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+body {
+    height: fit-content;
+    background-image: url('Background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    column-gap: 60%;
+    align-items: center;
+    background-image: linear-gradient(to right, #570D63, rgb(27, 65, 201), #1A338A);
+    height: 110px;
+}
+
+#logo h1{
+    font-family: 'Inika';
+    font-weight: 700;
+}
+
+#navbar{
+    display: flex;
+    height: 110px;
+    align-items: center;
+}
+
+#navbar li{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#navbar a{
+    font-family: 'Inter';
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    padding: 33px;
+}
+
+#navbar a:hover{
+    text-decoration: underline;
+    text-decoration-thickness:2px;
+}
+
+#button1{
+    background-color: transparent;
+    display: none;
+    border: none;
+    height: 65px;
+    width: 65px;
+}
+
+#button2{
+    background-color: transparent;
+    border: none;
+    height: 65px;
+    width: 65px;
+    padding-left: 50px;
+}
+
+#unique_nav{
+    background-color: black;
+    height: 50px;
+    border-radius: 8px;
+}
+
+#unique_nav a{
+    font-family: 'Inter';
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    padding: 33px;
+}
+
+#sidebar{
+    display: none;
+    position: fixed;
+    right:0;
+    top:0;
+    padding-right: 4%;
+    height: 500px;
+    width: fit-content;
+    background-image: linear-gradient(to right, #1c3db3, #1A338A);
+    background-size: cover;
+    animation: slidein 0.5s forwards;
+}
+
+#sidebar #navbar{
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+}
+
+#sidebar.slide-out {
+    animation: slideout 0.5s forwards;
+}
+
+#sidebar #navbar #unique_nav{
+    margin-top: 15px;
+}
+
+main{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-right: 6%;
+}
+
+#register_form input{
+    margin-top: 20px;
+    height:50px;
+    width: 290px;
+    border: #828282;
+    border-radius: 8px;
+}
+
+#register_form label{
+    font-size: 16px;
+    font-weight:500;
+}
+
+#Register_Box{
+    font-family: 'Inter';
+    margin-left: 6%;
+    /* background-color: beige; */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+#columns_box{
+    display: flex; 
+    column-gap: 20px;
+    height: 100px;
+}
+
+#gender_cont label{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: -120px;
+}
+
+#gender_cont input{
+    transform: scale(0.4, 0.4);
+    padding: 0px;
+    margin: 0px;
+    margin-left: -28px;
+}
+
+#gender_cont{
+    display: flex;
+    margin-left: -105px;
+}
+
+#email{
+    padding-right: 320px;
+}
+
+#date{
+   padding-left: 160px;
+   padding-right: 160px;
+}
+
+#sign_button{
+    color: white;
+    width: 610px;
+    height: 50px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error_text{
+    color: red;
+    font-family: 'Inter';
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to left, #570D63, rgb(27, 65, 201), #1A338A);
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#up-footer{
+    display: flex;
+    line-height: 25px;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+#up-footer div{
+    width: 250px;
+}
+
+#social-container{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    column-gap: 8px;
+}
+
+#social-container p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer hr{
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+@media (max-width: 1100px) {
+    header{
+        column-gap: 70%;
+    }
+    #button1{
+        display: block;
+    }
+    #button2{
+        margin-left:150px
+    }
+    #Register_Box{
+        width: 100%;
+        /* background-color: pink; */
+    }
+    #columns_box{
+        display: flex; 
+        /* flex-direction: column; */
+        column-gap: 10%;
+        height: fit-content;
+    }
+    main{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+    #columns_box input{
+        padding-right: 7%;
+    }
+
+    #email{
+        padding-right: 45%;
+    }
+
+    #sign_button{
+        color: white;
+        width: 77%;
+        height: 50px;
+        background-color: black;
+        border-radius: 5px;
+    }
+    #img1{
+        width: 300px;
+        height: 300px;
+    }
+    #up-footer div{
+        width: fit-content;
+        max-width: 250px;
+    }
+    header{
+        column-gap: 75%;
+    }
+    #button1{
+        display: block;
+    }
+    #navbar_container{
+        display: none;
+    }
+    .dis{
+        display: none;
+    }
+}
+
+@media (max-width: 599px) {
+    #dis{
+        display: none;
+    }
+    header{
+        column-gap: 51%;
+    }
+    #sidebar{
+        padding: none;
+        margin: none;
+        width: 100%;
+        justify-content: center;
+        margin-top: 100px;
+        background-image: linear-gradient(to right, #570D63, #1B41C9, #1A338A);
+    }
+    #button2{
+        align-self: flex-end;
+        margin-right: 0;
+    }
+
+    #columns_box{
+        flex-direction: column;
+        row-gap:20px;
+    }
+    #email{
+        padding-right: 8%;
+    }
+}
